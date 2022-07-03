@@ -18,7 +18,18 @@ npm i path
 
 # Pacotes do frontend
 
-npm i path
+npm i iconscout/react-unicons
+npm i @mantine/core @mantine/hooks axios
+
+npm i react-file-base64 react-input-emoji redux react-redux react-router-dom
+
+npm i redux-devtools-extension redux-logger redux-persist redux-thunk socket.io-client timeago.js
+
+
+
+
+
+
 
 {
   "name": "starter",

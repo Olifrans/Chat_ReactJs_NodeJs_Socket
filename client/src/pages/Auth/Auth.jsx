@@ -56,8 +56,8 @@ const Auth = () => {
         <img src={Logo} alt="" />
 
         <div className="Webname">
-          <h1>ZKC Media</h1>
-          <h6>Explore the ideas throughout the world</h6>
+          <h1>Olifrans Social Media</h1>
+          <h6>Explore as ideias em todo o mundo</h6>
         </div>
       </div>
 
@@ -65,7 +65,7 @@ const Auth = () => {
 
       <div className="a-right">
         <form className="infoForm authForm" onSubmit={handleSubmit}>
-          <h3>{isSignUp ? "Register" : "Login"}</h3>
+          <h3>{isSignUp ? "Criar Conta" : "Fazer Login"}</h3>
           {isSignUp && (
             <div>
               <input
@@ -146,15 +146,15 @@ const Auth = () => {
               }}
             >
               {isSignUp
-                ? "Already have an account Login"
-                : "Don't have an account Sign up"}
+                ? "Já tem uma conta Entrar"
+                : "Não tem conta Cadastre-se"}
             </span>
             <button
               className="button infoButton"
               type="Submit"
               disabled={loading}
             >
-              {loading ? "Loading..." : isSignUp ? "SignUp" : "Login"}
+              {loading ? "Loading..." : isSignUp ? "SignUp" : "Fazer Login"}
             </button>
           </div>
         </form>
