@@ -4,26 +4,22 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 
-
-
 // routes
 import AuthRoute from "./routes/AuthRoute.js";
 import UserRoute from "./routes/UserRoute.js";
 import PostRoute from "./routes/PostRoute.js";
 import UploadRoute from "./routes/UploadRoute.js";
-
-// import ChatRoute from "./routes/ChatRoute.js";
-// import MessageRoute from "./routes/MessageRoute.js";
+import ChatRoute from "./routes/ChatRoute.js";
+import MessageRoute from "./routes/MessageRoute.js";
 
 const app = express();
 
-// // middleware
-// app.use(bodyParser.json({ limit: "30mb", extended: true }));
-// app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-// app.use(cors());
+// middleware
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors());
 
-
-// to serve images inside public folder
+// pega as imagens dentro da pasta pública
 app.use(express.static("public"));
 app.use("/images", express.static("images"));
 
