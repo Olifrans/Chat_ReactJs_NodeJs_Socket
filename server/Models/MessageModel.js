@@ -2,8 +2,15 @@ import mongoose from "mongoose";
 
 const MessageSchema = mongoose.Schema(
   {
-    members: {
-      type: Array,
+    chatId: {
+      type: String,
+    },
+    senderId: {
+      type: String,
+    },
+
+    text: {
+      type: String,
     },
   },
   {
@@ -11,5 +18,5 @@ const MessageSchema = mongoose.Schema(
   }
 );
 
-const MessageModel = mongoose.model("Message", MessageModel);
+const MessageModel = mongoose.model("Message", MessageSchema);
 export default MessageModel;
