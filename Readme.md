@@ -16,16 +16,23 @@ npm i path
 
 
 
-# Pacotes do frontend
+# Pacotes do frontend_Client
 
 npm i iconscout/react-unicons
-npm i @mantine/core @mantine/hooks axios
-
-npm i react-file-base64 react-input-emoji redux react-redux react-router-dom
-
-npm i redux-devtools-extension redux-logger redux-persist redux-thunk socket.io-client timeago.js
-
-
+npm i @mantine/core
+npm i @mantine/hooks axios
+npm i axios
+npm i react-router-dom
+npm i react-redux
+npm i redux 
+npm i react-input-emoji 
+npm i react-file-base64
+npm i redux-devtools-extension
+npm i redux-logger
+npm i redux-persist
+npm i redux-thunk
+npm i socket.io-client
+npm i timeago.js
 
 
 

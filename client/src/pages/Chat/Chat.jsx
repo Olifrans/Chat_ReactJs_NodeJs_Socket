@@ -19,7 +19,8 @@ const Chat = () => {
   const [currentChat, setCurrentChat] = useState(null);
   const [sendMessage, setSendMessage] = useState(null);
   const [receivedMessage, setReceivedMessage] = useState(null);
-  // Get the chat in chat section
+
+  // Obter o bate-papo na seção de bate-papo
   useEffect(() => {
     const getChats = async () => {
       try {
@@ -32,32 +33,30 @@ const Chat = () => {
     getChats();
   }, [user._id]);
 
-  // Connect to Socket.io
+  // Conecte-se ao Socket.io
   useEffect(() => {
     socket.current = io("ws://localhost:8800");
     socket.current.emit("new-user-add", user._id);
     socket.current.on("get-users", (users) => {
       setOnlineUsers(users);
+      //console.log(onlineUsers);
     });
   }, [user]);
 
-  // Send Message to socket server
+  // Enviar mensagem para o servidor de soquete
   useEffect(() => {
-    if (sendMessage!==null) {
-      socket.current.emit("send-message", sendMessage);}
+    if (sendMessage !== null) {
+      socket.current.emit("send-message", sendMessage);
+    }
   }, [sendMessage]);
 
-
-  // Get the message from socket server
+  // Recebe mensagem do servidor de soquete
   useEffect(() => {
     socket.current.on("recieve-message", (data) => {
-      console.log(data)
+      console.log(data);
       setReceivedMessage(data);
-    }
-
-    );
+    });
   }, []);
-
 
   const checkOnlineStatus = (chat) => {
     const chatMember = chat.members.find((member) => member !== user._id);

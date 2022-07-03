@@ -32,12 +32,12 @@
     /* Create the gradient. */
     background-image: var(--buttonBg);
     
-    /* Set the background size and repeat properties. */
+    /* Defina o tamanho do plano de fundo e repita as propriedades. */
     background-size: 100%;
     background-repeat: repeat;
   
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
+    /* Use o texto como uma máscara para o plano de fundo. */
+    /* Isso mostrará o gradiente como uma cor de texto em vez do elemento bg. */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;

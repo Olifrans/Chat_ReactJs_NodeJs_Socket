@@ -35,7 +35,7 @@ const Auth = () => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  // Form Submission
+  // Envio de formulário
   const handleSubmit = (e) => {
     setConfirmPass(true);
     e.preventDefault();
@@ -57,7 +57,7 @@ const Auth = () => {
 
         <div className="Webname">
           <h1>Olifrans Social Media</h1>
-          <h6>Explore as ideias em todo o mundo</h6>
+          <h6>Um mundo as ideias</h6>
         </div>
       </div>
 
@@ -131,7 +131,7 @@ const Auth = () => {
               display: confirmPass ? "none" : "block",
             }}
           >
-            *Confirm password is not same
+            *Confirmar senha não é a mesma
           </span>
           <div>
             <span
@@ -146,8 +146,8 @@ const Auth = () => {
               }}
             >
               {isSignUp
-                ? "Já tem uma conta Entrar"
-                : "Não tem conta Cadastre-se"}
+                ? "Já tem uma conta Entrar " 
+                : " Não tem conta Cadastre-se"}
             </span>
             <button
               className="button infoButton"
