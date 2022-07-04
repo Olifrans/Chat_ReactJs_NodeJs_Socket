@@ -15,7 +15,7 @@ const upload = multer({ storage: storage });
 
 router.post("/", upload.single("file"), (req, res) => {
     try {
-      return res.status(200).json("Arquivo enviado com sucesso");
+      return res.status(200).json("File uploded successfully");
     } catch (error) {
       console.error(error);
     }

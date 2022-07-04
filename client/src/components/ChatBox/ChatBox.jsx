@@ -30,7 +30,7 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
     if (chat !== null) getUserData();
   }, [chat, currentUser]);
 
-  // fetch messages
+  // buscar mensagens
   useEffect(() => {
     const fetchMessages = async () => {
       try {
@@ -44,12 +44,12 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
     if (chat !== null) fetchMessages();
   }, [chat]);
 
-  // Always scroll to last Message
+  // rolagem até a última mensagem
   useEffect(() => {
     scroll.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Send Message
+  // Enviar mensagem
   const handleSend = async (e) => {
     e.preventDefault();
     const message = {
